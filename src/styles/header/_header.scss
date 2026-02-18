@@ -1,0 +1,50 @@
+.header {
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: url('../pictures/img/mobile-cover.png');
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__title {
+    max-width: 279px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 20px 88px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    color: #FFF;
+
+  }
+}
+
+.icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  &--phone {
+    background-image: url('../pictures/icons/phone.png');
+  }
+
+  &--menu {
+    background-image: url('../pictures/icons/menu.png');
+  }
+}
