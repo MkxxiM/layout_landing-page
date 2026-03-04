@@ -19,10 +19,13 @@
   align-items: $align;
 }
 
-@mixin display-grid($columns: 6, $gap: 0) {
+@mixin display-grid {
   display: grid;
-  grid-template-columns: repeat($columns, 1fr);
-  gap: $gap;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+  row-gap: 92px;
+  margin-inline: 20px;
+  @content;
 }
 
 @mixin typography(

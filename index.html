@@ -108,8 +108,8 @@
       </section>
 
       <section class="comparison" id = "comparison">
-        <h2 class = "content__title">Compare bikes</h2>
-        <article class = "comparison__product">
+        <h2 class = "content__title comparison__title">Compare Bikes</h2>
+        <article class = "comparison__product comparison__product--1">
           <div class="comparison__product-cell">
             <img src="src/pictures/img/Sporty_4.png"
               alt="bike"
@@ -120,7 +120,7 @@
           </div>
         </article>
 
-        <article class = "comparison__product">
+        <article class = "comparison__product comparison__product--2">
           <div class="comparison__product-cell">
             <img src="src/pictures/img/ST.png"
               alt="bike"
@@ -131,7 +131,7 @@
           </div>
         </article>
 
-        <article class = "comparison__product">
+        <article class = "comparison__product comparison__product--3">
           <div class="comparison__product-cell">
             <img src="src/pictures/img/Agile.png"
               alt="bike"
@@ -144,11 +144,16 @@
       </section>
 
       <section class="details" id = "details">
-        <h2 class = "content__title">The details</h2>
-        <article class = "details__product-1">
+        <h2 class = "content__title details__title">The Details</h2>
+        <article class = "details__product">
           <div class="details__photo">
-            <img src="src/pictures/img/det-img_1.png" alt="details"
-            class = "details__photo--first">
+            <img
+              src="src/pictures/img/det-img_1.png"
+              srcset="src/pictures/img/det-img_1.png 480w, src/pictures/img/det-img1_tablet.png 800w, src/pictures/img/det-img1_tablet.png 1200w"
+              sizes="(min-width: 1260px) 50vw, (min-width: 744px) 66vw, 100vw"
+              alt="details"
+              class = "details__photo--first"
+            >
             <img src="src/pictures/img/det-img_2.png" alt="details"
             class = "details__photo--second">
           </div>
@@ -160,10 +165,14 @@
           </div>
         </article>
 
-        <article class = "details__product-2">
+        <article class = "details__product">
           <div class="details__photo">
-            <img src="src/pictures/img/det-img_3.png" alt="details">
-            <img src="src/pictures/img/det-img_4.png" alt="details">
+            <img src="src/pictures/img/det-img_3.png" alt="details"
+                srcset="src/pictures/img/det-img_3.png 480w, src/pictures/img/det-img3_tablet.png 800w, src/pictures/img/det-img3_tablet.png 1200w"
+                sizes="(min-width: 1260px) 50vw, (min-width: 744px) 66vw, 100vw"
+                class = "details__photo--first">
+            <img src="src/pictures/img/det-img_4.png" alt="details"
+            class = "details__photo--second">
           </div>
           <div class="details__product-cell">
             <h3 class = "details__product-title">Range & Integrated lights</h3>
@@ -173,10 +182,16 @@
           </div>
         </article>
 
-        <article class = "details__product-3">
+        <article class = "details__product">
           <div class="details__photo">
-            <img src="src/pictures/img/det-img_5.png" alt="details">
-            <img src="src/pictures/img/det-img_6.png" alt="details">
+            <img src="src/pictures/img/det-img_5.png"
+                alt="details"
+                class = "details__photo--third">
+            <img src="src/pictures/img/det-img_6.png"
+                srcset="src/pictures/img/det-img_6.png 480w, src/pictures/img/det-img6_tablet.png 800w, src/pictures/img/det-img6_tablet.png 1200w"
+                sizes="(min-width: 1260px) 50vw, (min-width: 744px) 66vw, 100vw"
+                alt="details"
+                class = "details__photo--fourth">
           </div>
           <div class="details__product-cell">
             <h3 class = "details__product-title">Hydraulic disc brakes & Lightweight</h3>
@@ -194,7 +209,7 @@
       </section>
 
       <section class="contacts" id = "contacts">
-        <h2 class = "content__title">Contact us</h2>
+        <h2 class = "content__title contacts__title">Contact us</h2>
         <div class = "contacts__form">
           <form>
 
