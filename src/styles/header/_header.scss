@@ -26,20 +26,6 @@
   &__icons {
     display: flex;
     gap: 24px;
-
-    @include set.on-desktop {
-      &::before {
-        @include set-mix.display-flex(
-          $direction: row,
-          $justify: center,
-          $align: center
-        );
-
-        content: '+1 234 555-55-55';
-
-        @include set-mix.typography(12px, 700, 16px, 2px);
-      }
-    }
   }
 
   &__title {
@@ -59,24 +45,42 @@
 }
 
 .top-bar {
-  @include set-mix.display-flex(row, space-between, center);
+@include set-mix.display-flex(row, space-between, center);
 
-  padding: var.$mobile-top-bar-padd;
+margin: 24px 0;
+
+@include set.on-tablet {
+  margin: 36px 0;
+}
+
+@include set.on-desktop {
+  margin: 36px 0;
+}
+
+&--header {
+  padding-inline: 20px;
 
   @include set.on-tablet {
-    padding: var.$tablet-top-bar-padd;
+    padding-inline: 72px;
   }
 
   @include set.on-desktop {
-    padding: var.$desktop-top-bar-padd;
-  }
-
-  &-logo {
-    @include set-mix.display-flex(row, center, center);
-  }
+    padding-inline: 120px;
+}
+}
 }
 
 .menu {
+  padding-inline: 20px;
+
+  @include set.on-tablet {
+    padding-inline: 72px;
+  }
+
+  @include set.on-desktop {
+    padding-inline: 120px;
+  }
+
   box-sizing: border-box;
   height: 100vh;
   background-color: #c2c2c2;
@@ -85,6 +89,7 @@
 
   opacity: 0;
   pointer-events: none;
+  scroll-behavior: none;
 
   &__nav {
     margin-bottom: 40px;
@@ -94,7 +99,6 @@
     @include set-mix.display-flex($direction: column, $justify: none, $align: none);
 
     gap: 16px;
-    padding-left: 20px;
     text-decoration: none;
 
     &-phone-number {
@@ -136,7 +140,28 @@
 
   &--phone {
     background-image: url('../pictures/icons/phone.png');
+    position: relative;
+
+    @include set.on-desktop {
+      &:hover {
+
+        &::before {
+          content: '+1 234 555-55-55';
+
+          position: absolute;
+          right: calc(100% + 12px);
+          top: 50%;
+          transform: translateY(-50%);
+          white-space: nowrap;
+          padding: 6px 10px;
+          color: #fff;
+
+          @include set-mix.typography(12px, 700, 16px, 2px);
+        }
+      }
+    }
   }
+
 
   &--menu {
     background-image: url('../pictures/icons/menu.png');
@@ -148,7 +173,6 @@
 }
 
 .nav {
-  padding-left: 20px;
 
   &__list {
     margin: 0;
