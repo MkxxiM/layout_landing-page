@@ -33,7 +33,7 @@
 
         <div class="header__icons">
           <a
-            href="#"
+            href="tel:+12345555555"
             class="icon icon--phone"
           ></a>
           <a
@@ -113,6 +113,7 @@
           <div class="comparison__product-cell">
             <img src="src/pictures/img/Sporty_4_phone.png"
               srcset="src/pictures/img/Sporty_4_phone.png 320w, src/pictures/img/Sporty_4_tablet.png 744w, src/pictures/img/Sporty_4_desktop.png 1260w"
+              sizes="(min-width: 1260px) 32w, (min-width: 744px) 66vw, 100vw"
               alt="bike"
               class = "comparison__product-cell--photo">
             <h3 class = "comparison__product-cell--title">Sporty ride 4</h3>
@@ -125,6 +126,7 @@
           <div class="comparison__product-cell">
             <img src="src/pictures/img/ST_phone.png"
               srcset="src/pictures/img/ST_phone.png 320w, src/pictures/img/ST_tablet.png 744w, src/pictures/img/ST_desktop.png 1260w"
+              sizes="(min-width: 1260px) 32w, (min-width: 744px) 66vw, 100vw"
               alt="bike"
               class = "comparison__product-cell--photo">
             <h3 class = "comparison__product-cell--title">Ride in town ST</h3>
@@ -137,6 +139,7 @@
           <div class="comparison__product-cell">
             <img src="src/pictures/img/Agile_phone.png"
               srcset="src/pictures/img/Agile_phone.png 320w, src/pictures/img/Agile_tablet.png 744w, src/pictures/img/Agile_desktop.png 1260w"
+              sizes="(min-width: 1260px) 32w, (min-width: 744px) 66vw, 100vw"
               alt="bike"
               class = "comparison__product-cell--photo">
             <h3 class = "comparison__product-cell--title">Agile ride 3</h3>
@@ -152,9 +155,11 @@
           <div class="details__photo">
             <img src="src/pictures/img/det-img_1_phone.png" alt="details"
                 srcset="src/pictures/img/det-img_1_phone.png 320w, src/pictures/img/det-img_1_tablet.png 744w, src/pictures/img/det-img_1_desktop.png 1260w"
+                sizes="(min-width: 1260px) 32w, (min-width: 744px) 66vw, 100vw"
                 class = "details__photo--first">
             <img src="src/pictures/img/det-img_2_phone.png"
             srcset="src/pictures/img/det-img_2_phone.png 320w, src/pictures/img/det-img_2_tablet.png 744w, src/pictures/img/det-img_2_desktop.png 1260w"
+            sizes="(min-width: 1260px) 32w, (min-width: 744px) 66vw, 100vw"
             alt="details"
             class = "details__photo--second">
           </div>
@@ -170,9 +175,11 @@
           <div class="details__photo">
             <img src="src/pictures/img/det-img_3_phone.png" alt="details"
                 srcset="src/pictures/img/det-img_3_phone.png 320w, src/pictures/img/det-img_3_tablet.png 744w, src/pictures/img/det-img_3_desktop.png 1260w"
+                sizes="(min-width: 1260px) 32w, (min-width: 744px) 66vw, 100vw"
                 class = "details__photo--first">
             <img src="src/pictures/img/det-img_4_phone.png"
             srcset="src/pictures/img/det-img_4_phone.png 320w, src/pictures/img/det-img_4_tablet.png 744w, src/pictures/img/det-img_4_desktop.png 1260w"
+            sizes="(min-width: 1260px) 32w, (min-width: 744px) 66vw, 100vw"
             alt="details"
             class = "details__photo--second">
           </div>
@@ -188,10 +195,12 @@
           <div class="details__photo">
             <img src="src/pictures/img/det-img_5_phone.png"
                 srcset="src/pictures/img/det-img_5_phone.png 320w, src/pictures/img/det-img_5_tablet.png 744w, src/pictures/img/det-img_5_desktop.png 1260w"
+                sizes="(min-width: 1260px) 32w, (min-width: 744px) 66vw, 100vw"
                 alt="details"
                 class = "details__photo--third">
             <img src="src/pictures/img/det-img_6_phone.png"
                 srcset="src/pictures/img/det-img_6_phone.png 320w, src/pictures/img/det-img_6_tablet.png 744w, src/pictures/img/det-img_6_desktop.png 1260w"
+                sizes="(min-width: 1260px) 32w, (min-width: 744px) 66vw, 100vw"
                 alt="details"
                 class = "details__photo--fourth">
           </div>
@@ -219,6 +228,7 @@
               type="text"
               name="name"
               placeholder="Name"
+              required
               class = "contacts__input"
             />
 
@@ -226,12 +236,14 @@
               type="email"
               name="email"
               placeholder="Email"
+              required
               class = "contacts__input"
             />
 
             <textarea
               name="message"
               placeholder="Message"
+              required
               class = "contacts__textarea"
             ></textarea>
 
@@ -243,20 +255,21 @@
         <div class = "contacts__info">
           <div class = "contacts__info-cell">
             <p>Phone</p>
-            <p class = "contacts__info--item">+1 234 5555-55-55</p>
+            <a class = "contacts__info--item" href="tel:+12345555555">+1 234 5555-55-55</a>
           </div>
 
           <div class = "contacts__info-cell">
             <p>Email</p>
-            <p class = "contacts__info--item">hello@miami.com</p>
+            <a class = "contacts__info--item" href="mailto:hello@miami.com">hello@miami.com</a>
           </div>
 
           <div class = "contacts__info-cell">
             <p>Address</p>
-            <p class = "contacts__info--item">400 first ave. <br>
-               suite 700 <br>
-               Minneapolis, MN 55401
-            </p>
+            <a class = "contacts__info--item" href="https://maps.google.com/?q=400+first+ave.+suite+700+minneapolis,+mn+55401" target="_blank" rel="noopener noreferrer">
+              400 first ave. <br>
+              suite 700 <br>
+              Minneapolis, MN 55401
+            </a>
           </div>
         </div>
       </section>
@@ -266,6 +279,7 @@
     <footer class="footer">
       <img src="src/pictures/img/footer_phone.png"
       srcset="src/pictures/img/footer_phone.png 320w, src/pictures/img/footer_tablet.png 744w, src/pictures/img/footer_desktop.png 1260w"
+      sizes="(min-width: 1260px) 32w, (min-width: 744px) 66vw, 100vw"
       alt="footer logo"
       class = "footer__logo">
     </footer>
