@@ -137,6 +137,7 @@ margin: 24px 0;
   display: block;
   width: 24px;
   height: 24px;
+  transition: transform 0.2s ease;
 
   &--phone {
     background-image: url('../pictures/icons/phone.png');
@@ -144,10 +145,7 @@ margin: 24px 0;
 
     @include set.on-desktop {
       &:hover {
-
-        background-image: url('../pictures/icons/phone_bigger_icon.png');
-        width: 32px;
-        height: 32px;
+      transform: scale(1.33);
 
         &::before {
           content: '+1 234 555-55-55';
@@ -172,10 +170,7 @@ margin: 24px 0;
 
     @include set.on-desktop {
       &:hover {
-
-        background-image: url('../pictures/icons/menu_bigger_icon.png');
-        width: 32px;
-        height: 32px;
+        transform: scale(1.33);
       }
     }
   }
@@ -199,7 +194,8 @@ margin: 24px 0;
 
   &__item {
     &:hover{
-      border-bottom: #1D1D1D 1px solid;
+      border-bottom: 1px solid #1D1D1D;
+      margin-top: -1px;
       width: fit-content;
     }
   }
